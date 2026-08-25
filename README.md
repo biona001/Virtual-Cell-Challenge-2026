@@ -11,3 +11,11 @@ Metric cells show `raw / scaled` values, matching the [live validation leaderboa
 | Date | Model | Rank | Overall | PDS | MSE | JAC | NMAE | FID | Reach | Description |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | August 21, 2026 | Matched-context NTC bootstrap (seed 2026) | 76 / 104 | −0.2987 | 0.508 / 0.018 | 1.039 / 0.000 | 0.000 / −0.083 | 1.002 / −0.001 | 0.003 / −1.716 | 0.070 / −0.010 | [Details](models/ntc-bootstrap-seed-2026.md) |
+
+## Plan
+
++ Model 1: Assume perturbation has no effect at all, so each perturbation is a random NTC cell
++ Model 2: Search existing CRISPRi data for the best matched NTC, and hope that data have the 300 targets perturbed
++ Model 3: Public method (Concept bottleneck models, SquiDiff, models from last year, etc)
++ Model 4: Our own thing
+  
