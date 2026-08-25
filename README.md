@@ -19,3 +19,9 @@ Metric cells show `raw / scaled` values, matching the [live validation leaderboa
 + Model 3: Public method (Concept bottleneck models, SquiDiff, models from last year, etc)
 + Model 4: Our own thing
   
+## Important things to consider
+
++ Is the given cell line from humans?
+  + If so, what tissue(s)?
++ Are the cell lines cancerous?
++ Are there DMSO controls (chemical exposure)? Probably not but good to keep in mind
