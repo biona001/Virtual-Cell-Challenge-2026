@@ -18,6 +18,8 @@ Metric cells show `raw / scaled` values, matching the [live validation leaderboa
 + Model 2: Search existing CRISPRi data for the best matched NTC, and hope that data have the 300 targets perturbed
 + Model 3: Public method (Concept bottleneck models, SquiDiff, models from last year, etc)
 + Model 4: Our own thing
+
++ Find good existing generative models for gene expressions (not necessary in the perturbed setting, for control genes is enough)
   
 ## Important things to consider
 
