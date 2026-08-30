@@ -37,3 +37,13 @@ Metric cells show `raw / scaled` values, matching the [live validation leaderboa
 | **GEARS** | Mature | [snap-stanford/GEARS](https://github.com/snap-stanford/GEARS) | No universal pretrained model | Yes |
 | **CellOT** | Research-quality implementation | [bunnech/cellot](https://github.com/bunnech/cellot) | No universal pretrained model | Yes |
 | **scDiffusion** | Research-quality implementation | [EperLuo/scDiffusion](https://github.com/EperLuo/scDiffusion) | Partially; some pretrained components are used, but no universal diffusion model | Yes, typically substantial training |
+
+## Existing methods we can try for sampling expression level X1~P(x1 | x2) for given expression levels X2=x2
+| Method | Maturity of software | Software | Pretrained model available? | Normally need to train yourself? | Directly models/samples \(P(X_1 \mid X_2)\)? |
+|---|---|---|---|---|---|
+| **VAEAC** | Established research implementation | [tigvarts/vaeac](https://github.com/tigvarts/vaeac) | No general pretrained model | Yes | **Yes.** Designed for arbitrary conditioning: observe any subset of variables and sample the remaining variables |
+| **ACFlow** | Established research implementation | [lupalab/ACFlow](https://github.com/lupalab/ACFlow) | Some pretrained models for benchmark datasets, but not gene expression | Yes | **Yes.** Explicitly models arbitrary conditional distributions \(p(x_u \mid x_o)\) |
+| **MIWAE** | Established research implementation | [pamattei/miwae](https://github.com/pamattei/miwae) | No general pretrained model | Yes | **Approximately.** Designed for probabilistic imputation of missing variables using a latent-variable model |
+| **TabDiff** | Modern research implementation | [MinkaiXu/TabDiff](https://github.com/MinkaiXu/TabDiff) | No general pretrained gene-expression model | Yes | **Yes/approximately.** Diffusion-based conditional generation can generate missing variables conditional on observed variables |
+| **scGPT** | Mature single-cell foundation-model implementation | [bowang-lab/scGPT](https://github.com/bowang-lab/scGPT) | **Yes**, pretrained checkpoints are available | Usually fine-tune/adapt rather than train from scratch | **Partially.** Supports masked gene-expression prediction, but is not primarily an arbitrary conditional sampler |
+| **scFoundation** | Mature single-cell foundation-model implementation | [biomap-research/scFoundation](https://github.com/biomap-research/scFoundation) | **Yes**, pretrained models are available | Usually fine-tune/adapt rather than train from scratch | **Partially.** Supports gene-expression reconstruction/prediction, but is not a direct arbitrary conditional sampler |
