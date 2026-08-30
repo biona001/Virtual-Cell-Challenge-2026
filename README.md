@@ -28,3 +28,13 @@ Metric cells show `raw / scaled` values, matching the [live validation leaderboa
   + If so, what tissue(s)?
 + Are the cell lines cancerous?
 + Are there DMSO controls (chemical exposure)? Probably not but good to keep in mind
+
+## Existing methods we can try for sampling expression level X~P(x)
+| Method | Maturity of software | Software | Pretrained model available? | Normally need to train yourself? |
+|---|---|---|---|---|
+| **scVI** | Very mature | [scverse/scvi-tools](https://github.com/scverse/scvi-tools) | Yes, some pretrained models are available | Usually yes, especially for dataset-specific applications |
+| **scGen** | Mature | [theislab/scgen](https://github.com/theislab/scgen) | Limited; no universal pretrained model | Yes |
+| **CPA** | Mature | [theislab/CPA](https://github.com/theislab/CPA) | Some pretrained models for specific datasets | Yes |
+| **GEARS** | Mature | [snap-stanford/GEARS](https://github.com/snap-stanford/GEARS) | No universal pretrained model | Yes |
+| **CellOT** | Research-quality implementation | [bunnech/cellot](https://github.com/bunnech/cellot) | No universal pretrained model | Yes |
+| **scDiffusion** | Research-quality implementation | [EperLuo/scDiffusion](https://github.com/EperLuo/scDiffusion) | Partially; some pretrained components are used, but no universal diffusion model | Yes, typically substantial training |
