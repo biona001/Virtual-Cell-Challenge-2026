@@ -20,7 +20,7 @@ Metric cells show `raw / scaled` values, matching the [live validation leaderboa
 + Model 4: Our own thing
 
 + Find good existing generative models for gene expressions (not necessary in the perturbed setting, for control genes is enough)
-+ Find other existing single-cell single-gene perturbation datasets, the public ones listed on the VCC website does not seem cover all 300 cases.
++ Find other existing single-cell single-gene perturbation datasets, the public ones listed on the VCC website cover only 272 targeting-genes.
   
 ## Important things to consider
 
