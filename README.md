@@ -38,7 +38,7 @@ Metric cells show `raw / scaled` values, matching the [live validation leaderboa
 | **CellOT** | Research-quality implementation | [bunnech/cellot](https://github.com/bunnech/cellot) | No universal pretrained model | Yes |
 | **scDiffusion** | Research-quality implementation | [EperLuo/scDiffusion](https://github.com/EperLuo/scDiffusion) | Partially; some pretrained components are used, but no universal diffusion model | Yes, typically substantial training |
 
-## Existing methods we can try for sampling expression level X1~P(x1 | x2) for given expression levels X2=x2
+## Existing methods we may use or adapt for sampling expression level X1~P(x1 | x2) for given expression levels X2=x2
 | Method | Maturity of software | Software | Pretrained model available? | Normally need to train yourself? | Can use observed genes to predict/reconstruct other genes? | True conditional sampling \(X_1 \sim P(X_1 \mid X_2)\)? |
 |---|---|---|---|---|---|---|
 | **scGPT** | Mature | [bowang-lab/scGPT](https://github.com/bowang-lab/scGPT) | **Yes**, pretrained checkpoints are available | Usually fine-tune/adapt rather than train from scratch | **Yes.** Supports masked gene-expression prediction | **Not directly.** Primarily predicts/reconstructs masked expression values |
