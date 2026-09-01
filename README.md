@@ -6,13 +6,13 @@
 
 ## Our model ranking
 
-Metric cells show `raw / scaled` values, matching the [live validation leaderboard](https://virtualcellchallenge.org/leaderboard). Ranks are dated snapshots and will change as new submissions arrive.
+Metric cells show `scaled / raw` values, matching the [live validation leaderboard](https://virtualcellchallenge.org/leaderboard). Ranks are dated snapshots and will change as new submissions arrive.
 
 | Date | Model | Rank | Overall | PDS | MSE | JAC | NMAE | FID | Reach | Description |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| August 21, 2026 | Matched-context NTC bootstrap (seed 2026) | 76 / 104 | −0.2987 | 0.508 / 0.018 | 1.039 / 0.000 | 0.000 / −0.083 | 1.002 / −0.001 | 0.003 / −1.716 | 0.070 / −0.010 | [Details](models/ntc-bootstrap-seed-2026.md) |
-| August 30, 2026 | b01A | 213 / 473 | 0.0184 | 0.583 / 0.182 | 1.591 / 0.000 | 0.022 / −0.022 | 0.981 / 0.031 | 0.463 / −0.170 | 0.158 / 0.089 | First non-null benchmark (method notes kept off-repo) |
-| August 31, 2026 | b02 | 168 / 511 | 0.0766 | 0.733 / 0.517 | 3.717 / 0.000 | 0.019 / −0.031 | 0.991 / 0.014 | 0.472 / −0.133 | 0.160 / 0.092 | Entry `xxOfLsSjxpyvy2pvSvNT`; method notes kept off-repo |
+| August 21, 2026 | Matched-context NTC bootstrap (seed 2026) | 76 / 104 | −0.2987 | 0.018 / 0.508 | 0.000 / 1.039 | −0.083 / 0.000 | −0.001 / 1.002 | −1.716 / 0.003 | −0.010 / 0.070 | [Details](models/ntc-bootstrap-seed-2026.md) |
+| August 30, 2026 | b01A | 213 / 473 | 0.0184 | 0.182 / 0.583 | 0.000 / 1.591 | −0.022 / 0.022 | 0.031 / 0.981 | −0.170 / 0.463 | 0.089 / 0.158 | First non-null benchmark (method notes kept off-repo) |
+| August 31, 2026 | b02 | 168 / 511 | 0.0766 | 0.517 / 0.733 | 0.000 / 3.717 | −0.031 / 0.019 | 0.014 / 0.991 | −0.133 / 0.472 | 0.092 / 0.160 | Entry `xxOfLsSjxpyvy2pvSvNT`; method notes kept off-repo |
 
 ## Plan
 
