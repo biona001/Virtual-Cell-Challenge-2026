@@ -16,10 +16,8 @@ Metric cells show `scaled / raw` values, matching the [live validation leaderboa
 
 ## Plan
 
-+ Model 1: Assume perturbation has no effect at all, so each perturbation is a random NTC cell
 + Model 2: Search existing CRISPRi data for the best matched NTC, and hope that data have the 300 targets perturbed
 + Model 3: Public method (Concept bottleneck models, SquiDiff, models from last year, etc)
-+ Model 4: Our own thing
 
 + Find other existing single-cell single-gene perturbation datasets, the public ones listed on the VCC website cover only 272 targeting-genes.
   
