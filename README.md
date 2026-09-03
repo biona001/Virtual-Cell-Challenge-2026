@@ -13,7 +13,7 @@ Metric cells show `scaled / raw` values, matching the [live validation leaderboa
 | August 21, 2026 | Matched-context NTC bootstrap (seed 2026) | 76 / 104 | −0.2987 | 0.018 / 0.508 | 0.000 / 1.039 | −0.083 / 0.000 | −0.001 / 1.002 | −1.716 / 0.003 | −0.010 / 0.070 | [Details](models/ntc-bootstrap-seed-2026.md) |
 | August 30, 2026 | b01A | 213 / 473 | 0.0184 | 0.182 / 0.583 | 0.000 / 1.591 | −0.022 / 0.022 | 0.031 / 0.981 | −0.170 / 0.463 | 0.089 / 0.158 | First non-null benchmark (method notes kept off-repo) |
 | August 31, 2026 | b02 | 168 / 511 | 0.0766 | 0.517 / 0.733 | 0.000 / 3.717 | −0.031 / 0.019 | 0.014 / 0.991 | −0.133 / 0.472 | 0.092 / 0.160 | Entry `xxOfLsSjxpyvy2pvSvNT`; method notes kept off-repo |
-| September 3, 2026 | b03 | 236 | 0.0649 | 0.424 / 0.691 | 0.000 / >1 | −0.029 / 0.020 | 0.044 / 0.973 | −0.138 / 0.471 | 0.088 / 0.157 | Same generator as b02 but effects sourced from a **different dataset** (X-Atlas/Orion HEK293T instead of Replogle K562) + simplex-normalized generation; raw values (except MSE, clamp-hidden) derived from anchor maps; method notes kept off-repo |
+| September 3, 2026 | b03 | 236 | 0.0649 | 0.424 / 0.691 | 0.000 / >1 | −0.029 / 0.020 | 0.044 / 0.973 | −0.138 / 0.471 | 0.088 / 0.157 | Same generator as b02 but effects sourced from a **different dataset** (X-Atlas/Orion HEK293T instead of Replogle K562) + simplex-normalized generation |
 
 ## Plan
 
