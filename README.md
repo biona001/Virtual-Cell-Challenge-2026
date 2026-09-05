@@ -17,6 +17,7 @@ Metric cells show `scaled / raw` values, matching the [live validation leaderboa
 | September 4, 2026 | b04 | 176 | 0.0953 | 0.515 / 0.732 | 0.000 / >1 | −0.024 / 0.021 | 0.042 / 0.975 | −0.085 / 0.484 | 0.123 / 0.181 | Same generator as b03; effects from X-Atlas/Orion **HCT116** (colon cancer) — best score so far; raw derived from anchor maps (MSE clamp-hidden); method notes off-repo |
 | September 5, 2026 | b05 | 148 | 0.1113 | 0.559 / 0.753 | 0.000 / 4.426 | −0.021 / 0.023 | 0.070 / 0.959 | −0.074 / 0.490 | 0.134 / 0.198 | Same generator as b04; effects combined from several source datasets with per-context weights — best score so far; entry `Nh5Lmz1UuxKUNOzRycjI`; method notes kept off-repo |
 | September 5, 2026 | b06 | 314 | 0.0357 | 0.487 / 0.721 | 0.000 / 1.695 | −0.035 / 0.018 | 0.050 / 0.971 | −0.377 / 0.400 | 0.089 / 0.158 | b05 with a global attenuation of the injected effects (×0.4) — worse on every metric (raw MSE 4.43→1.69 but still >1; DE call sets shrank ~8×); entry `7K4xYSRj5yAEDIGId75N`; method notes kept off-repo |
+| September 5, 2026 | b07 | 250 | 0.0772 | 0.432 / 0.696 | 0.000 / 3.789 | −0.013 / 0.026 | 0.018 / 0.989 | −0.063 / 0.494 | 0.088 / 0.158 | Same generator as b04; effects from a **different dataset** (a primary-cell CRISPRi screen, single source for all contexts) — plain-source comparison with b02/b03/b04; entry `mcpq6FqWvRp4eULwapwK`; method notes kept off-repo |
 
 ## Plan
 
