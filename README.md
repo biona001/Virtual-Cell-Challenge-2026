@@ -6,18 +6,18 @@
 
 ## Our model ranking
 
-Metric cells show `scaled / raw` values, matching the [live validation leaderboard](https://virtualcellchallenge.org/leaderboard). Ranks are dated snapshots and will change as new submissions arrive.
+Metric cells show `scaled / raw` values, matching the [live validation leaderboard](https://virtualcellchallenge.org/leaderboard). Ranks are dated snapshots and will change as new submissions arrive. The description gives the main ingredients of each method (source dataset of the injected effects, how sources are combined, generator changes); full method notes are kept off-repo.
 
 | Date | Model | Rank | Overall | PDS | MSE | JAC | NMAE | FID | Reach | Description |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | August 21, 2026 | Matched-context NTC bootstrap (seed 2026) | 76 / 104 | −0.2987 | 0.018 / 0.508 | 0.000 / 1.039 | −0.083 / 0.000 | −0.001 / 1.002 | −1.716 / 0.003 | −0.010 / 0.070 | [Details](models/ntc-bootstrap-seed-2026.md) |
-| August 30, 2026 | b01A | 213 / 473 | 0.0184 | 0.182 / 0.583 | 0.000 / 1.591 | −0.022 / 0.022 | 0.031 / 0.981 | −0.170 / 0.463 | 0.089 / 0.158 | First non-null benchmark (method notes kept off-repo) |
-| August 31, 2026 | b02 | 168 / 511 | 0.0766 | 0.517 / 0.733 | 0.000 / 3.717 | −0.031 / 0.019 | 0.014 / 0.991 | −0.133 / 0.472 | 0.092 / 0.160 | Entry `xxOfLsSjxpyvy2pvSvNT`; method notes kept off-repo |
-| September 3, 2026 | b03 | 236 | 0.0649 | 0.424 / 0.691 | 0.000 / >1 | −0.029 / 0.020 | 0.044 / 0.973 | −0.138 / 0.471 | 0.088 / 0.157 | Same generator as b02 but effects sourced from a **different dataset** (X-Atlas/Orion HEK293T instead of Replogle K562) + simplex-normalized generation |
-| September 4, 2026 | b04 | 176 | 0.0953 | 0.515 / 0.732 | 0.000 / >1 | −0.024 / 0.021 | 0.042 / 0.975 | −0.085 / 0.484 | 0.123 / 0.181 | Same generator as b03; effects from X-Atlas/Orion **HCT116** (colon cancer) — best score so far; raw derived from anchor maps (MSE clamp-hidden); method notes off-repo |
-| September 5, 2026 | b05 | 148 | 0.1113 | 0.559 / 0.753 | 0.000 / 4.426 | −0.021 / 0.023 | 0.070 / 0.959 | −0.074 / 0.490 | 0.134 / 0.198 | Same generator as b04; effects combined from several source datasets with per-context weights — best score so far; entry `Nh5Lmz1UuxKUNOzRycjI`; method notes kept off-repo |
-| September 5, 2026 | b06 | 314 | 0.0357 | 0.487 / 0.721 | 0.000 / 1.695 | −0.035 / 0.018 | 0.050 / 0.971 | −0.377 / 0.400 | 0.089 / 0.158 | b05 with a global attenuation of the injected effects (×0.4) — worse on every metric (raw MSE 4.43→1.69 but still >1; DE call sets shrank ~8×); entry `7K4xYSRj5yAEDIGId75N`; method notes kept off-repo |
-| September 5, 2026 | b07 | 250 | 0.0772 | 0.432 / 0.696 | 0.000 / 3.789 | −0.013 / 0.026 | 0.018 / 0.989 | −0.063 / 0.494 | 0.088 / 0.158 | Same generator as b04; effects from a **different dataset** (a primary-cell CRISPRi screen, single source for all contexts) — plain-source comparison with b02/b03/b04; entry `mcpq6FqWvRp4eULwapwK`; method notes kept off-repo |
+| August 30, 2026 | b01A | 213 / 473 | 0.0184 | 0.182 / 0.583 | 0.000 / 1.591 | −0.022 / 0.022 | 0.031 / 0.981 | −0.170 / 0.463 | 0.089 / 0.158 | Negative-binomial control model fit on each context's controls; injected effects = Replogle K562 (genome-wide CRISPRi) DE gene sets, only a few genes per target (272/300 targets covered) |
+| August 31, 2026 | b02 | 168 / 511 | 0.0766 | 0.517 / 0.733 | 0.000 / 3.717 | −0.031 / 0.019 | 0.014 / 0.991 | −0.133 / 0.472 | 0.092 / 0.160 | Depth-calibrated NB control model; full shrunken log-fold-change vectors sourced from Replogle K562 (~2,500 genes/target, 272/300 targets); entry `xxOfLsSjxpyvy2pvSvNT` |
+| September 3, 2026 | b03 | 236 | 0.0649 | 0.424 / 0.691 | 0.000 / >1 | −0.029 / 0.020 | 0.044 / 0.973 | −0.138 / 0.471 | 0.088 / 0.157 | Same generator as b02 plus simplex-normalized generation; effects sourced from X-Atlas/Orion **HEK293T** (300/300 targets) |
+| September 4, 2026 | b04 | 176 | 0.0953 | 0.515 / 0.732 | 0.000 / >1 | −0.024 / 0.021 | 0.042 / 0.975 | −0.085 / 0.484 | 0.123 / 0.181 | Same generator as b03; effects sourced from X-Atlas/Orion **HCT116** (colon cancer, 300/300 targets); best single source |
+| September 5, 2026 | b05 | 148 | 0.1113 | 0.559 / 0.753 | 0.000 / 4.426 | −0.021 / 0.023 | 0.070 / 0.959 | −0.074 / 0.490 | 0.134 / 0.198 | Same generator as b04; effects combined from three sources (Replogle K562, X-Atlas HEK293T, X-Atlas HCT116) per target and context, weighted by the control-baseline similarity between source and context (softmax of Pearson, τ = 0.01); best score so far; entry `Nh5Lmz1UuxKUNOzRycjI` |
+| September 5, 2026 | b06 | 314 | 0.0357 | 0.487 / 0.721 | 0.000 / 1.695 | −0.035 / 0.018 | 0.050 / 0.971 | −0.377 / 0.400 | 0.089 / 0.158 | b05 with a global attenuation of the injected effects (×0.4); worse on every metric (raw MSE 4.43 to 1.69 but still >1; DE call sets shrank ~8×); entry `7K4xYSRj5yAEDIGId75N` |
+| September 5, 2026 | b07 | 250 | 0.0772 | 0.432 / 0.696 | 0.000 / 3.789 | −0.013 / 0.026 | 0.018 / 0.989 | −0.063 / 0.494 | 0.088 / 0.158 | Same generator as b04; effects sourced from the resting CD4⁺ T-cell CRISPRi screen (Dann et al. 2026, GSE314342, 10x Flex) as a single source for all contexts (297/300 targets); entry `mcpq6FqWvRp4eULwapwK` |
 
 ## Plan
 
