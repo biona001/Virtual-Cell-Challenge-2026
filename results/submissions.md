@@ -127,3 +127,23 @@ threshold (\|z\| > 2 or 2.5) sits on the same monotone curve and is not planned.
 reading: fid 0.376 and pds 0.711 match the coverage arithmetic (predicted 0.37 and 0.71), and raw mse fell
 from 4.43 to 1.24 with 98 % fewer injected genes yet stayed above the baseline anchor (~0.99), so the
 injected effects still carry no gene-level agreement with the truth and mse remains out of reach.
+
+## b10 — September 8, 2026
+Rank 234 at publication · overall **0.0914**
+
+| pds | mse | jac | nmae | fid | reach |
+|---|---|---|---|---|---|
+| 0.560 / 0.753 | 0.000 / 2.433 | −0.029 / 0.020 | 0.067 / 0.960 | −0.155 / 0.466 | 0.106 / 0.172 |
+
+b05 with a single change: only source genes with test \|z\| > 2 are injected (about 1,500 genes per target;
+b05 injects \|z\| > 1, about 7,100; b09 injected \|z\| > 3, about 140). Third point on the threshold curve:
+1 → 0.1113, 2 → 0.0914, 3 → 0.0173. The scorer calls 352 / 262 / 388 genes per target in A / B / C.
+
+Reading: pds is identical to b05 (0.560 / 0.753 vs 0.559 / 0.753) and nmae is unchanged, so the \|z\| 1–2 band,
+roughly 5,400 genes per target and 90 % chance, carries no pattern information at all. Its only contribution in
+b05 was call-set size: fid fell from 0.490 to 0.466 raw and reach from 0.198 to 0.172, exactly the coverage
+term (predicted coverage 0.73 vs 0.82), and jac slipped slightly. By contrast the \|z\| 2–3 band does carry
+pattern: removing it too (b09) cost 0.10 of pds. Raw mse 2.43 sits between b05's 4.43 and b09's 1.24 and
+stays clamped. Conclusion: b05 is the optimum of the threshold family because fid and reach reward calling
+as many genes as the truth has, even at chance sign; the way past b05 is better sources and more real genes,
+not selection.

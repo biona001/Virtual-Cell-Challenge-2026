@@ -20,6 +20,7 @@ Full record of every submission (method, scores, diagnosis): [results/submission
 | September 5, 2026 | b07 | 250 | 0.0772 | 0.432 / 0.696 | 0.000 / 3.789 | −0.013 / 0.026 | 0.018 / 0.989 | −0.063 / 0.494 | 0.088 / 0.158 | single source: resting CD4⁺ T-cell CRISPRi screen — [details](results/submissions.md#b07--september-5-2026) |
 | September 7, 2026 | b08 | 197 | 0.1005 | 0.498 / 0.725 | 0.000 / 4.191 | −0.007 / 0.028 | 0.035 / 0.978 | −0.037 / 0.501 | 0.114 / 0.180 | b05's three sources + CD4-T + vcc2025 H1 in one pool; best fid/jac — [details](results/submissions.md#b08--september-7-2026) |
 | September 7, 2026 | b09 | 382 | 0.0173 | 0.463 / 0.711 | 0.000 / 1.237 | −0.023 / 0.022 | 0.046 / 0.973 | −0.454 / 0.376 | 0.072 / 0.143 | b05 with injection threshold \|z\| > 3; fid coverage collapsed — [details](results/submissions.md#b09--september-7-2026) |
+| September 8, 2026 | b10 | 234 | 0.0914 | 0.560 / 0.753 | 0.000 / 2.433 | −0.029 / 0.020 | 0.067 / 0.960 | −0.155 / 0.466 | 0.106 / 0.172 | b05 with injection threshold \|z\| > 2; pds identical to b05, fid/reach down via coverage — [details](results/submissions.md#b10--september-8-2026) |
 
 ## Plan
 
