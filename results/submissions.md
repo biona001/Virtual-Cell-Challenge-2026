@@ -147,3 +147,25 @@ pattern: removing it too (b09) cost 0.10 of pds. Raw mse 2.43 sits between b05's
 stays clamped. Conclusion: b05 is the optimum of the threshold family because fid and reach reward calling
 as many genes as the truth has, even at chance sign; the way past b05 is better sources and more real genes,
 not selection.
+
+## b11 — September 8, 2026
+Rank 116 at publication · overall **0.1318** · entry `z1GrAteXUyLdUketv7QC` · **best score so far**
+
+| pds | mse | jac | nmae | fid | reach |
+|---|---|---|---|---|---|
+| 0.630 / 0.785 | 0.000 / 4.690 | −0.013 / 0.026 | 0.062 / 0.961 | −0.047 / 0.498 | 0.159 / 0.220 |
+
+Three layers on top of each other. (1) The b05 tail unchanged: K562-led in A, HCT116-led in B and C, every
+source gene with test \|z\| > 1, which carries the coverage and the pds pattern. (2) The vcc2025 H1 hESC screen
+added as a source: it leads its 25 covered targets in all contexts (1,000 cells, deep knockdown, same Flex
+chemistry as the contexts). (3) A consensus head: for each target, the genes that at least two of the four
+main sources (K562, HEK293T, HCT116, resting CD4-T; sources with 50 or more knockdown cells) flag at
+\|z\| > 2 in the same direction with no contradiction, about 125 genes per target with about 90 % direction
+reliability against a third line, injected at the mean of the agreeing sources' shrunk fold changes × 1.5,
+overriding the tail's value. Offline gates before submission: 992 / 646 / 920 calls per target, 70 to 77 % of
+head genes called, up-share 0.50.
+
+Reading: +0.021 over b05. The gain is spread over five metrics, led by pds (+0.07 scaled: the boosted head
+sharpens the pattern), then reach (+0.025), fid (+0.027, precision 0.490 → 0.498 raw at unchanged coverage),
+jac (+0.008); nmae −0.008. mse stays clamped: raw mse rose to 4.69 because the head adds injected mass and
+the tail's mass is untouched, as expected for a design that keeps the tail.
