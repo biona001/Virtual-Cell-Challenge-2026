@@ -22,6 +22,7 @@ Full record of every submission (method, scores, diagnosis): [results/submission
 | September 7, 2026 | b09 | 382 | 0.0173 | 0.463 / 0.711 | 0.000 / 1.237 | −0.023 / 0.022 | 0.046 / 0.973 | −0.454 / 0.376 | 0.072 / 0.143 | b05 with injection threshold \|z\| > 3; fid coverage collapsed — [details](results/submissions.md#b09--september-7-2026) |
 | September 8, 2026 | b10 | 234 | 0.0914 | 0.560 / 0.753 | 0.000 / 2.433 | −0.029 / 0.020 | 0.067 / 0.960 | −0.155 / 0.466 | 0.106 / 0.172 | b05 with injection threshold \|z\| > 2; pds identical to b05, fid/reach down via coverage — [details](results/submissions.md#b10--september-8-2026) |
 | September 8, 2026 | b11 | 116 | 0.1318 | 0.630 / 0.785 | 0.000 / 4.690 | −0.013 / 0.026 | 0.062 / 0.961 | −0.047 / 0.498 | 0.159 / 0.220 | b05 + vcc2025 H1 on its 25 targets + a boosted cross-source consensus head; best so far — [details](results/submissions.md#b11--september-8-2026) |
+| September 9, 2026 | p01 (probe) | 350 | 0.0604 | 0.531 / 0.741 | 0.000 / 1.191 | −0.012 / 0.026 | 0.078 / 0.954 | −0.333 / 0.413 | 0.098 / 0.165 | diagnostic, not a candidate: the cross-source consensus head alone (~124 genes per target) with no tail — reads the head's raw mse and precision — [details](results/submissions.md#p01-probe--september-9-2026) |
 
 ## Plan
 

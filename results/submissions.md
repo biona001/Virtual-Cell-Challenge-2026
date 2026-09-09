@@ -169,3 +169,26 @@ Reading: +0.021 over b05. The gain is spread over five metrics, led by pds (+0.0
 sharpens the pattern), then reach (+0.025), fid (+0.027, precision 0.490 → 0.498 raw at unchanged coverage),
 jac (+0.008); nmae −0.008. mse stays clamped: raw mse rose to 4.69 because the head adds injected mass and
 the tail's mass is untouched, as expected for a design that keeps the tail.
+
+## p01 (probe) — September 9, 2026
+Rank 350 at publication · overall **0.0604** · entry `hqFfmfIO3dZ3pjoIGlRn` · diagnostic submission, not a candidate
+
+| pds | mse | jac | nmae | fid | reach |
+|---|---|---|---|---|---|
+| 0.531 / 0.741 | 0.000 / 1.191 | −0.012 / 0.026 | 0.078 / 0.954 | −0.333 / 0.413 | 0.098 / 0.165 |
+
+The cross-source consensus head alone: for each target, the genes flagged at \|z\| > 2 by at least two of
+the four main sources with the same direction (about 124 genes per target), injected at their calibrated
+size, the mean of the agreeing sources' shrunk fold changes, with no tail and no H1. The scorer calls
+68 / 67 / 113 genes per target. Purpose: with nothing else injected, the board's raw values measure the head
+itself.
+
+Reading. (1) Raw mse 1.19 is above the silence level of 1.04, so even this head adds net error: the
+best-agreeing genes we have do not match the hidden contexts closely enough in sign and size for the
+covariance to outweigh the injected energy; b09's \|z\| > 3 head scored 1.24. mse stays out of reach for
+source-transferred effects. (2) Raw fid 0.413 at an expected coverage of about 0.56 implies a direction
+precision of about 0.74 against the truth, better than the 0.60 of the broad call sets but well below
+the ~0.9 measured between source lines: agreement among cell lines transfers to the hidden contexts only
+partly. (3) The head carries the pattern: pds 0.741 raw from 124 genes against b05's 0.753 from 7,000.
+(4) nmae 0.954 raw is the best of all submissions, so the head's sizes are about right where its
+direction is right.
